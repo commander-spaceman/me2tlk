@@ -2,6 +2,8 @@
 
 Go library for reading Mass Effect 2 TLK (talk table) files.
 
+Part of the **[pcc-toolkit](https://github.com/commander-spaceman/pcc-toolkit)** project.
+
 ## Installation
 
 ```bash
