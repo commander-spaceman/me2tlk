@@ -50,9 +50,7 @@ func Parse(data []byte, path string) (*File, error) {
 	for i := int32(0); i < header.MaleEntryCount; i++ {
 		stringID := int32(binary.LittleEndian.Uint32(data[cursor : cursor+4]))
 		bitOffset := int32(binary.LittleEndian.Uint32(data[cursor+4 : cursor+8]))
-		if bitOffset >= 0 {
-			maleEntries[stringID] = bitOffset
-		}
+		maleEntries[stringID] = bitOffset
 		cursor += 8
 	}
 
@@ -60,9 +58,7 @@ func Parse(data []byte, path string) (*File, error) {
 	for i := int32(0); i < header.FemaleEntryCount; i++ {
 		stringID := int32(binary.LittleEndian.Uint32(data[cursor : cursor+4]))
 		bitOffset := int32(binary.LittleEndian.Uint32(data[cursor+4 : cursor+8]))
-		if bitOffset >= 0 {
-			femaleEntries[stringID] = bitOffset
-		}
+		femaleEntries[stringID] = bitOffset
 		cursor += 8
 	}
 
